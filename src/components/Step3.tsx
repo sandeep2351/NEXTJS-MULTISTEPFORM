@@ -10,7 +10,7 @@ const Step3 = () => {
 
   return (
     <div>
-      <h2>Step 3: Preferences</h2>
+      <h2 className="text-black">Step 3: Preferences</h2>
       <label>
         <input
           type="checkbox"

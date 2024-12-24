@@ -35,12 +35,6 @@ export default function RootLayout({
             <main className="flex-grow container mx-auto px-4 py-6">
               {children}
             </main>
-
-            {/* Footer */}
-            <footer className="bg-gray-800 text-white py-4">
-              <div className="container mx-auto px-4 text-center">
-              </div>
-            </footer>
           </div>
         </Layout>
       </body>

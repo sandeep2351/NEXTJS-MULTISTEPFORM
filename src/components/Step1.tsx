@@ -43,7 +43,7 @@ const Step1 = () => {
 
   return (
     <div>
-      <h2>Step 1: Personal Info</h2>
+      <h2 className="text-black">Step 1: Personal Info</h2>
       <input
         type="text"
         name="name"
@@ -62,7 +62,7 @@ const Step1 = () => {
         className="p-2 border"
       />
       {errors.email && <p className="text-red-500">{errors.email}</p>}
-      <button onClick={handleNext} className="mt-4 p-2 bg-blue-500 text-white">
+      <button onClick={handleNext} className="mt-4 p-2 bg-blue-500 text-white rounded-md">
         Next
       </button>
     </div>

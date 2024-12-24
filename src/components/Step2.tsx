@@ -40,7 +40,7 @@ const Step2 = () => {
 
   return (
     <div>
-      <h2>Step 2: Address Details</h2>
+      <h2 className="text-black">Step 2: Address Details</h2>
       <input
         type="text"
         name="address"

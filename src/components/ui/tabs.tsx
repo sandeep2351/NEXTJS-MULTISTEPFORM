@@ -25,7 +25,7 @@ export const TabsTrigger = ({
     hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 
     data-[state=active]:bg-blue-500 data-[state=active]:text-white data-[state=active]:shadow-lg
     data-[state=active]:before:absolute data-[state=active]:before:inset-0 
-    data-[state=active]:before:border data-[state=active]:before:border-blue-600 
+    data-[state=active]:before:border data-[state=active]:before:border-blue-600  data-[state=active]:rounded-lg
     ${className}`}
     value={value}
     {...props}

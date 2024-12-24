@@ -6,7 +6,7 @@ const Step4 = () => {
 
   return (
     <div>
-      <h2>Step 4: Review & Submit</h2>
+      <h2 className="text-black">Step 4: Review & Submit</h2>
       <p>Name: {personalInfo.name}</p>
       <p>Email: {personalInfo.email}</p>
       <p>Address: {addressDetails.address}</p>

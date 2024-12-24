@@ -19,7 +19,7 @@ export const TabsTrigger = ({
   className,
   value,
   ...props
-}: React.HTMLProps<HTMLButtonElement> & { value: string }) => (
+}: Omit<React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>, "type"> & { value: string }) => (
   <TabsPrimitive.Trigger
     className={`relative px-6 py-3 text-sm font-medium rounded-lg transition 
     hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 

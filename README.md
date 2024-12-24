@@ -1,3 +1,38 @@
+# NEXTJS_ASSIGNMENT: Multi-Step Form with Real-Time Collaboration
+
+This project implements a **Multi-Step Form** with **Real-Time Collaboration** capabilities, built using Next.js. It provides a user-friendly interface for completing forms across multiple steps and allows multiple users to collaborate in real-time while filling out the form.
+
+---
+
+## Features
+
+1. **Multi-Step Form Workflow**:
+   - Users can fill out the form across multiple steps.
+   - Navigation between steps is intuitive with "Next" and "Previous" buttons.
+   - Progress tracking through a visual indicator.
+
+2. **Real-Time Collaboration**:
+   - Multiple users can collaborate on the form simultaneously.
+   - Real-time updates are synchronized across all connected users.
+   - Changes made by one user are immediately reflected for others.
+
+3. **Responsive Design**:
+   - Fully optimized for desktop, tablet, and mobile devices.
+
+4. **Data Validation**:
+   - Form inputs are validated in real-time to ensure data consistency.
+   - Custom error messages for invalid or incomplete fields.
+
+5. **State Management**:
+   - Efficiently manages form data using state and context APIs.
+   - Provides seamless user experience across navigation.
+
+6. **Modern Stack**:
+   - Built with **Next.js** for server-side rendering and optimized performance.
+   - Integrated with **WebSocket** or **Socket.IO** for real-time updates.
+   - Styled with **Tailwind CSS** for a polished and modern UI.
+
+---
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

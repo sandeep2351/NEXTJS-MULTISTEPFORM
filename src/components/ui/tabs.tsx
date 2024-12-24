@@ -4,19 +4,30 @@ import * as TabsPrimitive from "@radix-ui/react-tabs";
 export const Tabs = TabsPrimitive.Root;
 
 // TabsList Component
-export const TabsList = ({ className, ...props }: React.HTMLProps<HTMLDivElement>) => (
-  <TabsPrimitive.List className={`flex space-x-2 ${className}`} {...props} />
+export const TabsList = ({
+  className,
+  ...props
+}: React.HTMLProps<HTMLDivElement>) => (
+  <TabsPrimitive.List
+    className={`flex space-x-4 bg-gray-100 p-2 rounded-md shadow-inner ${className}`}
+    {...props}
+  />
 );
 
 // TabsTrigger Component
 export const TabsTrigger = ({
   className,
-  value, // Ensure this value matches the TabsContent value
+  value,
   ...props
 }: React.HTMLProps<HTMLButtonElement> & { value: string }) => (
   <TabsPrimitive.Trigger
-    className={`px-4 py-2 rounded-md text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 ${className}`}
-    value={value} // Ensure the value is passed here
+    className={`relative px-6 py-3 text-sm font-medium rounded-lg transition 
+    hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 
+    data-[state=active]:bg-blue-500 data-[state=active]:text-white data-[state=active]:shadow-lg
+    data-[state=active]:before:absolute data-[state=active]:before:inset-0 
+    data-[state=active]:before:border data-[state=active]:before:border-blue-600 
+    ${className}`}
+    value={value}
     {...props}
   />
 );
@@ -24,12 +35,13 @@ export const TabsTrigger = ({
 // TabsContent Component
 export const TabsContent = ({
   className,
-  value, // Ensure this value matches the TabsTrigger value
+  value,
   ...props
 }: React.HTMLProps<HTMLDivElement> & { value: string }) => (
   <TabsPrimitive.Content
-    className={`p-4 border-t border-gray-200 ${className}`}
-    value={value} // Ensure the value is passed here
+    className={`p-6 bg-white border border-gray-200 rounded-lg shadow-md transition-opacity 
+    duration-300 ease-in-out data-[state=inactive]:opacity-0 data-[state=inactive]:hidden ${className}`}
+    value={value}
     {...props}
   />
 );

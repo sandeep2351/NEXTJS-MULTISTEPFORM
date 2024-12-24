@@ -1,7 +1,8 @@
-"use client";
+"use client"; // This directive tells Next.js that this file is a client-side component
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"; // Removed TabsContent
 import { useFormStore } from "@/store/formStore"; // Assuming you use Zustand
 
 const MultiStepForm = () => {
@@ -19,7 +20,7 @@ const MultiStepForm = () => {
       try {
         const res = await fetch("/api/formState");
         const data = await res.json();
-        
+
         // Update the form state with the fetched data
         setPersonalInfo(data.personalInfo);
         setAddressDetails(data.addressDetails);
@@ -28,7 +29,7 @@ const MultiStepForm = () => {
         console.error("Error fetching mock API data", error);
       }
     }, 5000); // Fetch every 5 seconds
-    
+
     return () => clearInterval(interval); // Cleanup on unmount
   }, [setPersonalInfo, setAddressDetails, setPreferences]);
 

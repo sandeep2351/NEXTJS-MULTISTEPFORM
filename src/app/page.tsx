@@ -1,19 +1,13 @@
 "use client"; // This directive tells Next.js that this file is a client-side component
 
-import { useState, useEffect } from 'react';
+import { useEffect } from "react";
 import MultiStepForm from "@/components/MultiStepForm";
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
   useEffect(() => {
-    // Apply the dark class to the <html> element
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [isDarkMode]);
+    // Apply the dark class to the <html> element for dark mode
+    document.documentElement.classList.add("dark");
+  }, []);
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:bg-gradient-to-br dark:from-gray-900 dark:to-indigo-800 p-6 sm:p-12">
@@ -37,7 +31,6 @@ export default function Home() {
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg w-full max-w-3xl p-6 sm:p-10">
         <MultiStepForm />
       </div>
-
     </div>
   );
 }
